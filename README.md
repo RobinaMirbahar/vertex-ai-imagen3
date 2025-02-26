@@ -1,82 +1,116 @@
-🎨 AI-Powered Studio-Quality Product Photos with Vertex AI Imagen 3
+# 🎨 AI-Powered Studio-Quality Product Photos with Vertex AI Imagen 3
 
-📌 Overview
-This project leverages Google Vertex AI Imagen 3 to generate studio-quality product images from text prompts. You can create high-resolution AI-generated photos of [specify product, e.g., sneakers, jewelry, clothing], showcasing them from multiple angles while emphasizing key details like [materials, textures, branding, lighting, etc.].
+🔗 **Try it in Colab:** [Google Colab Notebook](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)  
+📂 **GitHub File:** [image_generation.py](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/image_generation.py)  
 
-🎯 Key Features
-✅ Studio-Quality AI Images – Generate high-resolution, photorealistic product images
-✅ Customizable Prompts – Define specific angles, lighting, and product details
-✅ Google Colab Integration – Run the notebook easily with no local setup required
-✅ Powered by Vertex AI Imagen 3 – Uses Google's latest Imagen 3 model for stunning AI-generated images
+# Vertex AI Imagen 3 - Image Generation
 
-🔗 Live Demo
-🚀 Try it now on Google Colab: Click Here
-## 📌 Setup Instructions  
+## 🚀 Overview  
+Generate professional product images using **Google Vertex AI Imagen 3** to create studio-quality visuals from text prompts. 🖼️✨  
 
-🛠 Setup & Installation
-Follow these steps to run the project:
+You can generate high-resolution AI-powered photos of **[specify product, e.g., sneakers, jewelry, clothing]**, showcasing them from multiple angles while highlighting key details like **[materials, textures, branding, lighting, etc.]**. 🎨🔍  
 
-1️⃣ Prerequisites
-✔ A Google Cloud account with Vertex AI enabled
-✔ Google Colab for running the Jupyter notebook
-✔ IAM permissions for Vertex AI API
 
-2️⃣ Authentication in Google Colab
-✔ Open the Google Colab notebook here.
-✔ Run the first cell to authenticate your Google Cloud account:
+## 🔧 Installation  
 
+🚀 Clone the repository and install dependencies:  
+
+```bash
+git clone https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab.git
+cd vertex-ai-imagen3-colab
+pip install google-auth google-cloud-aiplatform pillow
+```
+
+### 🎯 Key Features
+✅ **1024x1024 Resolution** - Studio-quality output  
+✅ **Multi-angle Generation** - Show products from different views  
+✅ **Colab Integration** - Cloud-based execution  
+✅ **Commercial Ready** - Watermark-free options  
+
+## 🔗 Quick Start
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([[https://colab.research.google.com/github/yourusername/repo/blob/main/notebook.ipynb](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/image_generation.py))
+
+   
+## 🛠 Setup Guide
+
+### 1️⃣ Prerequisites
+- Google Cloud project with billing enabled
+- Vertex AI API activated
+- `Vertex AI User` IAM role
+
+### 2️⃣ Authentication
+```python
 from google.colab import auth
 auth.authenticate_user()
 
-✔ Initialize Vertex AI with your project details:
 import vertexai
-vertexai.init(project="your-project-id", location="us-central1")
+vertexai.init(project="YOUR-PROJECT-ID", location="us-central1")
+```
 
-3️⃣ Run the Notebook to Generate Images
-✔ Load the Imagen 3 model:
-from vertexai.vision_models import ImageGenerationModel  
-generation_model = ImageGenerationModel.from_pretrained("imagen-3.0-generate-002")
+### 3️⃣ Generate Images
+```python
+from vertexai.preview import vision_models
+from IPython.display import display
 
-✔ Provide a text prompt and generate the image:
-images = generation_model.generate_images(
-    prompt="Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design",
-    number_of_images=1,
+# Initialize model
+generator = vision_models.ImageGenerationModel.from_pretrained("imagegeneration-002")
+
+# Create product images
+response = generator.generate_images(
+    prompt="Professional studio photo of luxury sneakers, 360 view, 4K resolution",
+    number_of_images=4,
     aspect_ratio="1:1",
-    add_watermark=True
+    guidance_scale=15,
+    seed=1234
 )
 
-✔ Display the generated image:
-from PIL import ImageOps as PIL_ImageOps
-import IPython.display  
+# Display results
+for idx, image in enumerate(response.images):
+    print(f"Image {idx+1}")
+    display(image._pil_image)
+```
 
-def display_image(image, max_width: int = 600, max_height: int = 350) -> None:
-    pil_image = image._pil_image  
-    if pil_image.mode != "RGB":
-        pil_image = pil_image.convert("RGB")
-    pil_image = PIL_ImageOps.contain(pil_image, (max_width, max_height))
-    IPython.display.display(pil_image)
+## 🖼 Example Outputs
+| Prompt | Preview |
+|--------|---------|
+| "Premium coffee machine on marble countertop, steam rising" | ![Coffee Machine](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png)
+| "Designer sunglasses on beach towel with ocean background" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png)) |
+| "Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img03.png)) |
 
-display_image(images[0])
-✔ Customize the Prompt – Modify the prompt field to generate images of different products!
+## ⚙️ Customization
+```python
+# Advanced generation with negative prompts
+response = generator.generate_images(
+    prompt="Modern office chair with leather upholstery",
+    number_of_images=3,
+    negative_prompt="low quality, blurry, distorted",
+    aspect_ratio="16:9",
+    guidance_scale=20
+)
+```
 
-🖼 Example AI-Generated Images
-Prompt	Output
-"A futuristic smartwatch on a wooden table, soft lighting"	🖼 View Image
-"A sleek, modern electric car in a showroom"	🖼 View Image
-"A designer handbag with floral patterns on a white background"	🖼 View Image
-🚀 Customization
-🔹 Modify the Prompt – Describe your product, lighting, and scene
-🔹 Change Image Size & Aspect Ratio – Adjust settings like "aspect_ratio": "16:9"
-🔹 Generate Multiple Images – Increase number_of_images=3
+## 📚 Documentation
+- [Imagen 3 Technical Guide](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview)
+- [Vertex AI Python SDK](https://googleapis.dev/python/aiplatform/latest/vertexai.html)
+- [Colab Notebook Help](https://colab.research.google.com/notebooks/intro.ipynb)
 
-💡 Use Cases
-✅ E-Commerce & Product Listings – Generate professional photos without a photoshoot
-✅ Marketing & Ads – Create eye-catching promotional images
-✅ Prototyping & Concept Art – Visualize product designs before production
+## ⚠️ Troubleshooting
+**Common Issues:**
+- `Permission Denied`: Verify IAM roles
+- `Model Not Found`: Check model name spelling
+- `Invalid Aspect Ratio`: Use supported ratios (1:1, 4:3, 16:9)
+  
+ ## Common fixes
+    pip install --upgrade google-cloud-aiplatform
+    gcloud services enable aiplatform.googleapis.com
 
-📜 Official Google Documentation
-📖 Vertex AI Overview: Vertex AI Documentation
-📖 Vertex AI Model Garden: Model Garden Docs
-📖 Imagen 3 Model API: Imagen Model Documentation
-📖 Google Colab Guide: Colab Documentation
-📖 Google Cloud Authentication: Google Auth Docs
+```bash
+# Update SDK if errors persist
+pip install --upgrade google-cloud-aiplatform
+```
+## 🙌 Thank You!  
+
+If you find this project helpful, feel free to ⭐ star the repository and 🔄 fork it to explore more!  
+
+Happy coding! 🚀  
+
