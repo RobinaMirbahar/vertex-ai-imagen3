@@ -86,6 +86,7 @@ for idx, image in enumerate(response.images):
 | "Premium coffee machine on marble countertop, steam rising" | ![Coffee Machine](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png)
 | "Designer sunglasses on beach towel with ocean background" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png)) |
 | "Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img03.png)) |
+| "Design a caricature for a social media campaign promoting eco-friendly fashion.Include exaggerated, humorous depictions of a stylish character wearing outfits made from recycled materials, confidently strutting on a runway made of leaves and vines. Highlight sustainability, vibrant colors, and a fun, futuristic take on ethical fashion." | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img03.png)) |
 
 ## 🎚️ Advanced Configuration
 ```python
