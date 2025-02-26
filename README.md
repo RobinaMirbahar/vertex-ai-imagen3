@@ -11,14 +11,15 @@ Generate professional product images using **Google Vertex AI Imagen 3** to crea
 You can generate high-resolution AI-powered photos of **[specify product, e.g., sneakers, jewelry, clothing]**, showcasing them from multiple angles while highlighting key details like **[materials, textures, branding, lighting, etc.]**. 🎨🔍  
 
 
-## 🔧 Installation  
 
-🚀 Clone the repository and install dependencies:  
-
+### ⚙️ Clone the repository and install dependencies:  
 ```bash
 git clone https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab.git
 cd vertex-ai-imagen3-colab
-pip install google-auth google-cloud-aiplatform pillow
+python -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate  # For Windows
+pip install -r requirements.txt
 ```
 
 ### 🎯 Key Features
@@ -27,18 +28,27 @@ pip install google-auth google-cloud-aiplatform pillow
 ✅ **Colab Integration** - Cloud-based execution  
 ✅ **Commercial Ready** - Watermark-free options  
 
-## 🔗 Quick Start
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([[https://colab.research.google.com/github/yourusername/repo/blob/main/notebook.ipynb](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/image_generation.py))
+## 🔗 Quick Start  
+
+🚀 Run the notebook instantly in Google Colab:  
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4)  
+
+📂 View the source code on GitHub:  
+[**image_generation.py**](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/image_generation.py)  
+
 
    
-## 🛠 Setup Guide
+## 🔧 Installation & Setup
 
-### 1️⃣ Prerequisites
-- Google Cloud project with billing enabled
-- Vertex AI API activated
-- `Vertex AI User` IAM role
+ ### 📋 Prerequisites
+- Google Cloud account with [billing enabled](https://console.cloud.google.com/)
+- [Vertex AI API enabled](https://console.cloud.google.com/vertex-ai)
+- IAM permissions: `Vertex AI User` role
 
-### 2️⃣ Authentication
+
+
+### 🔐 Authentication
 ```python
 from google.colab import auth
 auth.authenticate_user()
@@ -47,7 +57,7 @@ import vertexai
 vertexai.init(project="YOUR-PROJECT-ID", location="us-central1")
 ```
 
-### 3️⃣ Generate Images
+### 📸 Image Generation
 ```python
 from vertexai.preview import vision_models
 from IPython.display import display
@@ -70,47 +80,67 @@ for idx, image in enumerate(response.images):
     display(image._pil_image)
 ```
 
-## 🖼 Example Outputs
+## 📊 Example Outputs
 | Prompt | Preview |
 |--------|---------|
 | "Premium coffee machine on marble countertop, steam rising" | ![Coffee Machine](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png)
 | "Designer sunglasses on beach towel with ocean background" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png)) |
 | "Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design" | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img03.png)) |
 
-## ⚙️ Customization
+## 🎚️ Advanced Configuration
 ```python
-# Advanced generation with negative prompts
+# Customized generation with negative prompts
 response = generator.generate_images(
     prompt="Modern office chair with leather upholstery",
     number_of_images=3,
-    negative_prompt="low quality, blurry, distorted",
+    negative_prompt="low quality, blurry, distorted, watermark",
     aspect_ratio="16:9",
-    guidance_scale=20
+    guidance_scale=20,
+    temperature=0.7,
+    person_generation="avoid"
 )
 ```
 
-## 📚 Documentation
-- [Imagen 3 Technical Guide](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview)
-- [Vertex AI Python SDK](https://googleapis.dev/python/aiplatform/latest/vertexai.html)
-- [Colab Notebook Help](https://colab.research.google.com/notebooks/intro.ipynb)
 
-## ⚠️ Troubleshooting
-**Common Issues:**
-- `Permission Denied`: Verify IAM roles
-- `Model Not Found`: Check model name spelling
-- `Invalid Aspect Ratio`: Use supported ratios (1:1, 4:3, 16:9)
-  
- ## Common fixes
-    pip install --upgrade google-cloud-aiplatform
-    gcloud services enable aiplatform.googleapis.com
+## 🚨 Troubleshooting Guide
 
-```bash
-# Update SDK if errors persist
+### Common Errors & Solutions
+| Error | Solution |
+|-------|----------|
+| `PermissionDenied: 403` | Verify IAM roles & enable Vertex AI API |
+| `InvalidModelName: 404` | Check model name spelling & regional availability |
+| `InvalidAspectRatio` | Use supported ratios: 1:1, 4:3, or 16:9 |
+
+## Maintenance Commands
+# Update SDK components
 pip install --upgrade google-cloud-aiplatform
-```
+
+# Enable required services
+gcloud services enable aiplatform.googleapis.com
+
+## 📚 Documentation Resources  
+
+- [📖 Imagen 3 Technical Docs](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview)  
+- [🐍 Python SDK Reference](https://googleapis.dev/python/aiplatform/latest/vertexai.html)  
+- [📝 Prompt Engineering Guide](https://cloud.google.com/vertex-ai/docs/generative-ai/image/prompting)  
+- [🔒 Safety Filter Settings](https://cloud.google.com/vertex-ai/docs/generative-ai/image/safety)  
+
+## 🤝 Contributing  
+
+We welcome contributions! Follow these steps to contribute:  
+
+1. **Fork the repository** 🔄  
+2. **Clone your fork**  
+   ```bash
+   git clone https://github.com/your-username/vertex-ai-imagen3-colab.git
+   cd vertex-ai-imagen3-colab
+
+
 ## 🙌 Thank You!  
 
 If you find this project helpful, feel free to ⭐ star the repository and 🔄 fork it to explore more!  
 
 Happy coding! 🚀  
+## ⚠️ Disclaimer  
 
+Generated images must comply with [Google's Generative AI Prohibited Use Policy](https://cloud.google.com/terms/service-terms#19-google-generative-ai). Ensure responsible and ethical use of AI-generated content. 🚀  
