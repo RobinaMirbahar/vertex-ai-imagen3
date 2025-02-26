@@ -81,13 +81,15 @@ for idx, image in enumerate(response.images):
 ```
 
 ## 📊 Example Outputs
-| **Prompt** | **Preview** |
-|------------|------------|
-| **"Premium coffee machine on marble countertop, steam rising"** | ![Coffee Machine](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png) |
-| **"Designer sunglasses on beach towel with ocean background"** | ![Sunglasses](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png) |
-| **"Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design"** | ![Sneakers](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img03.png) |
-| **"Design a caricature for a social media campaign promoting eco-friendly fashion. Include exaggerated, humorous depictions of a stylish character wearing outfits made from recycled materials, confidently strutting on a runway made of leaves and vines. Highlight sustainability, vibrant colors, and a fun, futuristic take on ethical fashion."** | ![Eco Fashion](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img04.png) |
-
+| **Category** | **Prompt** | **Preview** |
+|-------------|-----------|------------|
+| **General Product Photography** | 📷 **"Create a high-resolution, professional studio photo of a pair of sneakers, placed on a clean, minimalistic background. The lighting should be soft and diffused, highlighting textures and materials. Capture multiple angles for a complete product showcase."** | ![Sneakers](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png) |
+| **E-Commerce Product Listing** | 🛒 **"Generate a set of product images for an e-commerce listing of a smartwatch. Include front, back, and side views with a plain white background, even lighting, and realistic shadows."** | ![Smartwatch](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png) |
+| **Luxury & Premium Product Shots** | 💎 **"Studio-quality image of a luxury wristwatch on a black satin background with dramatic lighting. Highlight fine details such as textures, engravings, or embellishments to create a high-end look."** | ![Luxury Watch](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img2.png) |
+| **Lifestyle Product Photography** | 🏡 **"Generate an aesthetic lifestyle shot of a designer handbag being used in a modern home setting. Ensure natural lighting, warm tones, and a cozy, inviting atmosphere."** | ![Handbag](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img3.png) |
+| **360-Degree View for Interactive Display** | 🔄 **"Generate a seamless 360-degree product photography series for a high-end DSLR camera. Capture multiple angles with consistent lighting and high clarity for an interactive shopping experience."** | ![DSLR Camera](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img4.png) |
+| **Minimalist Product Showcase** | ⚪ **"Create a clean, high-quality product image of a wireless earbud case placed on a neutral, gradient background. Emphasize simplicity and elegance, with soft shadows and studio lighting."** | ![Earbuds](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img5.png) |
+| **Outdoor & Adventure Products** | 🌿 **"Capture a rugged outdoor product shot of a hiking backpack in a natural setting. Highlight durability and real-world use with earthy tones, dynamic lighting, and a scenic backdrop."** | ![Backpack](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img6.png) |
 
 ## 🎚️ Advanced Configuration
 ```python
