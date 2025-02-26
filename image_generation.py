@@ -37,6 +37,6 @@ def generate_image(prompt: str, number_of_images: int = 1, aspect_ratio: str = "
 
 if __name__ == "__main__":
     authenticate()
-    prompt = "A futuristic cityscape at night"
+    prompt = ""Generate high-resolution, professional product photos of sneakers, showcasing them from multiple angles and highlighting details like stitching, texture, and sole design"
     images = generate_image(prompt)
     display_image(images[0])
