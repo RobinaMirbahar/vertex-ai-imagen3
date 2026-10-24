@@ -1,14 +1,14 @@
 # 🎨 AI-Powered Studio-Quality Product Photos with Vertex AI Imagen 3
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4)
-[![GitHub Stars](https://img.shields.io/github/stars/RobinaMirbahar/vertex-ai-imagen3-colab?style=social)](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/RobinaMirbahar/vertex-ai-imagen3?style=social)](https://github.com/RobinaMirbahar/vertex-ai-imagen3/stargazers)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
 [![Vertex AI](https://img.shields.io/badge/Google-Vertex%20AI-4285F4?logo=google-cloud)](https://cloud.google.com/vertex-ai)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
 
 🔗 **Try it in Colab:** [Google Colab Notebook](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)
-📂 **Source Code:** [image_generation.py](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/image_generation.py)
+📂 **Source Code:** [image_generation.py](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/image_generation.py)
 
 ---
 
@@ -57,7 +57,7 @@ Before you begin, make sure you have:
 ### ⚙️ Clone & Install
 
 ```bash
-git clone https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab.git
+git clone https://github.com/RobinaMirbahar/vertex-ai-imagen3.git
 cd vertex-ai-imagen3-colab
 
 # Create and activate virtual environment
@@ -148,13 +148,13 @@ response = generator.generate_images(
 
 | Category | Prompt | Preview |
 |----------|--------|---------|
-| 📷 **General Product** | `"Professional studio photo of sneakers on a minimalistic background, soft diffused lighting, multiple angles"` | ![Sneakers](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img0.png) |
-| 🛒 **E-Commerce Listing** | `"Product images of a smartwatch — front, back, side views, plain white background, even lighting, realistic shadows"` | ![Smartwatch](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img1.png) |
-| 💎 **Luxury / Premium** | `"Studio-quality luxury wristwatch on black satin, dramatic lighting, fine textures and engravings highlighted"` | ![Luxury Watch](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img2.png) |
-| 🏡 **Lifestyle Shot** | `"Aesthetic lifestyle shot of a designer handbag in a modern home, natural lighting, warm tones, cozy atmosphere"` | ![Handbag](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img3.png) |
-| 🔄 **360° View** | `"Seamless 360-degree product series of a high-end DSLR camera, consistent lighting, high clarity for interactive shopping"` | ![DSLR Camera](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img4.png) |
-| ⚪ **Minimalist** | `"Clean product image of a wireless earbud case on a neutral gradient background, soft shadows, studio lighting"` | ![Earbuds](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img5.png) |
-| 🌿 **Outdoor / Adventure** | `"Rugged outdoor product shot of a hiking backpack in a natural setting, earthy tones, dynamic lighting, scenic backdrop"` | ![Backpack](https://github.com/RobinaMirbahar/vertex-ai-imagen3-colab/blob/main/Images/img6.png) |
+| 📷 **General Product** | `"Professional studio photo of sneakers on a minimalistic background, soft diffused lighting, multiple angles"` | ![Sneakers](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img0.png) |
+| 🛒 **E-Commerce Listing** | `"Product images of a smartwatch — front, back, side views, plain white background, even lighting, realistic shadows"` | ![Smartwatch](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img1.png) |
+| 💎 **Luxury / Premium** | `"Studio-quality luxury wristwatch on black satin, dramatic lighting, fine textures and engravings highlighted"` | ![Luxury Watch](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img2.png) |
+| 🏡 **Lifestyle Shot** | `"Aesthetic lifestyle shot of a designer handbag in a modern home, natural lighting, warm tones, cozy atmosphere"` | ![Handbag](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img3.png) |
+| 🔄 **360° View** | `"Seamless 360-degree product series of a high-end DSLR camera, consistent lighting, high clarity for interactive shopping"` | ![DSLR Camera](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img4.png) |
+| ⚪ **Minimalist** | `"Clean product image of a wireless earbud case on a neutral gradient background, soft shadows, studio lighting"` | ![Earbuds](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img5.png) |
+| 🌿 **Outdoor / Adventure** | `"Rugged outdoor product shot of a hiking backpack in a natural setting, earthy tones, dynamic lighting, scenic backdrop"` | ![Backpack](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/Images/img6.png) |
 
 ---
 
