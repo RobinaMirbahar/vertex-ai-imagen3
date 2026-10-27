@@ -6,6 +6,43 @@
 [![Vertex AI](https://img.shields.io/badge/Google-Vertex%20AI-4285F4?logo=google-cloud)](https://cloud.google.com/vertex-ai)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
+> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) (Google Developer Expert in Cloud & AI)  
+> **Focus:** Generating, Inpainting & Art-Directing Commercial Product Visuals with Google Cloud Vertex AI Imagen 3 in Python & Colab
+
+---
+
+## 🎯 Why I Built Studio-Quality Product Photography with Vertex AI Imagen 3 (Engineering Purpose & Real-World Value)
+
+### 1. 📸 Democratizing Commercial Studio Photography with Imagen 3
+Small e-commerce brands and indie makers rarely have the budget for studio lighting rigs and physical set design. I created this cookbook to show how Vertex AI Imagen 3 can generate photorealistic product scenes with studio-grade lighting and zero artifacts.
+
+### 2. 🎯 Precision Prompting for Lighting, Lens & Material Physics
+I documented structured prompt templates controlling focal length, macro depth-of-field, surface reflections, and negative prompts.
+
+### 3. ☁️ Enterprise-Ready Vertex AI SDK Integration
+Includes production Python code using Google Cloud IAM authentication, SynthID watermarking awareness, and batch generation.
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    subgraph Prompt ["1. Structured Art Direction"]
+        P_Sub["Product Subject + Material Texture"]
+        P_Light["Studio Lighting, Lens (85mm f/1.8) & Composition"]
+    end
+    subgraph Vertex ["2. Google Cloud Vertex AI"]
+        V_Img["Imagen 3 Generation & Editing Endpoint"]
+        V_Safe["Safety Filters & SynthID Provenance"]
+    end
+    subgraph Out ["3. Commercial Asset Pipeline"]
+        O_HiRes["High-Resolution Studio Product Render"]
+    end
+    P_Sub & P_Light --> V_Img --> V_Safe --> O_HiRes
+```
+
+---
 
 🔗 **Try it in Colab:** [Google Colab Notebook](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)
 📂 **Source Code:** [image_generation.py](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/image_generation.py)
@@ -293,3 +330,22 @@ Happy generating! 🚀
 <div align="center">
   <img src="https://raw.githubusercontent.com/RobinaMirbahar/RobinaMirbahar/main/ProfileImages/GithubBanner.svg" alt="Robina Mirbahar Banner" width="100%" />
 </div>
+
+<!-- AUTHOR_SIGNATURE_START -->
+---
+
+## 👩‍💻 About the Author
+
+**Robina Mirbahar — Google Cloud & AI Architect**  
+*Google Developer Expert (GDE) in Cloud & AI • Published Author • Multi-Agent Systems & Serverless GPU Builder*
+
+[![GitHub](https://img.shields.io/badge/GitHub-RobinaMirbahar-181717?style=for-the-badge&logo=github)](https://github.com/RobinaMirbahar)
+[![Medium](https://img.shields.io/badge/Medium-@robinamirbahar-000000?style=for-the-badge&logo=medium)](https://medium.com/@robinamirbahar)
+[![DEV.to](https://img.shields.io/badge/DEV.to-robinamirbahar-0A0A0A?style=for-the-badge&logo=devdotto)](https://dev.to/robinamirbahar)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Robina_Mirbahar-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/robina-mirbahar)
+[![GDE Profile](https://img.shields.io/badge/Google_Developer_Expert-Profile-4285F4?style=for-the-badge&logo=google)](https://g.dev/RobinaMirbahar)
+[![YouTube](https://img.shields.io/badge/YouTube-@RobinaMirbahar-FF0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/@RobinaMirbahar)
+[![X](https://img.shields.io/badge/X-@RobinaMirbahar-000000?style=for-the-badge&logo=x)](https://x.com/RobinaMirbahar)
+[![Amazon Author](https://img.shields.io/badge/Amazon_Book-Cloud_Computing_Voyage-FF9900?style=for-the-badge&logo=amazon)](https://www.amazon.com/dp/B0D146249R)
+
+<!-- AUTHOR_SIGNATURE_END -->
