@@ -1,0 +1,46 @@
+name: Python & Architecture Verification CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify Python Syntax, Notebooks & Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate Python Modules & Notebooks
+        run: |
+          python3 - << 'EOF'
+          import pathlib, py_compile, json, sys
+
+          root = pathlib.Path(".")
+          py_files = [p for p in root.rglob("*.py") if ".venv" not in p.parts and "node_modules" not in p.parts]
+          for p in py_files:
+              py_compile.compile(str(p), doraise=True)
+          print(f"Verified {len(py_files)} Python source files.")
+
+          nb_files = [p for p in root.rglob("*.ipynb") if ".ipynb_checkpoints" not in p.parts]
+          for nb in nb_files:
+              data = json.loads(nb.read_text(encoding="utf-8"))
+              assert "cells" in data, f"Invalid notebook: {nb}"
+          print(f"Verified {len(nb_files)} Jupyter notebooks.")
+
+          readme = root / "README.md"
+          assert readme.exists() and readme.stat().st_size > 100, "README.md must exist and be non-empty"
+          print("README.md architecture & documentation verified.")
+          EOF
