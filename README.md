@@ -1,9 +1,9 @@
 # 🎨 AI-Powered Studio-Quality Product Photos with Vertex AI Imagen 3
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4?utm_campaign=deveco_gdemembers&utm_source=deveco)
 [![GitHub Stars](https://img.shields.io/github/stars/RobinaMirbahar/vertex-ai-imagen3?style=social)](https://github.com/RobinaMirbahar/vertex-ai-imagen3/stargazers)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
-[![Vertex AI](https://img.shields.io/badge/Google-Vertex%20AI-4285F4?logo=google-cloud)](https://cloud.google.com/vertex-ai)
+[![Vertex AI](https://img.shields.io/badge/Google-Vertex%20AI-4285F4?logo=google-cloud)](https://cloud.google.com/vertex-ai?utm_campaign=deveco_gdemembers&utm_source=deveco)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
 > **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) (Google Developer Expert in Cloud & AI)  
@@ -44,7 +44,7 @@ flowchart TD
 
 ---
 
-🔗 **Try it in Colab:** [Google Colab Notebook](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4#scrollTo=Kex2ltfOg68z&uniqifier=2)
+🔗 **Try it in Colab:** [Google Colab Notebook](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4?utm_campaign=deveco_gdemembers&utm_source=deveco#scrollTo=Kex2ltfOg68z&uniqifier=2)
 📂 **Source Code:** [image_generation.py](https://github.com/RobinaMirbahar/vertex-ai-imagen3/blob/main/image_generation.py)
 
 ---
@@ -74,7 +74,7 @@ You can generate images of **any product** (sneakers, jewelry, clothing, electro
 
 Run the notebook instantly in Google Colab — no setup required:
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13dpz6jw5rPNVOj-JgLWG9QuStetGc9Y4?utm_campaign=deveco_gdemembers&utm_source=deveco)
 
 Or clone and run locally (see [Installation](#-installation--setup) below).
 
@@ -86,8 +86,8 @@ Or clone and run locally (see [Installation](#-installation--setup) below).
 
 Before you begin, make sure you have:
 
-- A [Google Cloud account](https://console.cloud.google.com/) with **billing enabled**
-- [Vertex AI API enabled](https://console.cloud.google.com/vertex-ai)
+- A [Google Cloud account](https://console.cloud.google.com/?utm_campaign=deveco_gdemembers&utm_source=deveco) with **billing enabled**
+- [Vertex AI API enabled](https://console.cloud.google.com/vertex-ai?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - IAM role: **`Vertex AI User`**
 - Python **3.8+**
 
@@ -205,7 +205,7 @@ Writing better prompts leads to significantly better results. Here are some best
 - **Add quality modifiers:** `"4K resolution"`, `"ultra-realistic"`, `"studio quality"`, `"sharp focus"`
 - **Use negative prompts** to exclude unwanted artifacts: `"no watermark, no blurring, no distortion"`
 
-📖 See the full [Prompt Engineering Guide](https://cloud.google.com/vertex-ai/docs/generative-ai/image/prompting) for more.
+📖 See the full [Prompt Engineering Guide](https://cloud.google.com/vertex-ai/docs/generative-ai/image/prompting?utm_campaign=deveco_gdemembers&utm_source=deveco) for more.
 
 ---
 
@@ -219,7 +219,7 @@ Writing better prompts leads to significantly better results. Here are some best
 | `InvalidModelName: 404` | Wrong model name or region | Check spelling & regional availability |
 | `InvalidAspectRatio` | Unsupported ratio used | Use `"1:1"`, `"4:3"`, or `"16:9"` only |
 | `QuotaExceeded` | API quota limit hit | Request quota increase in Cloud Console |
-| `BillingNotEnabled` | GCP billing inactive | Enable billing at [console.cloud.google.com](https://console.cloud.google.com/) |
+| `BillingNotEnabled` | GCP billing inactive | Enable billing at [console.cloud.google.com](https://console.cloud.google.com/?utm_campaign=deveco_gdemembers&utm_source=deveco) |
 
 ### Maintenance Commands
 
@@ -255,11 +255,11 @@ vertex-ai-imagen3-colab/
 
 | Resource | Link |
 |----------|------|
-| 📖 Imagen 3 Technical Docs | [cloud.google.com/vertex-ai/docs](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview) |
+| 📖 Imagen 3 Technical Docs | [cloud.google.com/vertex-ai/docs](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview?utm_campaign=deveco_gdemembers&utm_source=deveco) |
 | 🐍 Python SDK Reference | [googleapis.dev/python/aiplatform](https://googleapis.dev/python/aiplatform/latest/vertexai.html) |
-| 📝 Prompt Engineering Guide | [Image Prompting Best Practices](https://cloud.google.com/vertex-ai/docs/generative-ai/image/prompting) |
-| 🔒 Safety Filter Settings | [Content Safety Docs](https://cloud.google.com/vertex-ai/docs/generative-ai/image/safety) |
-| 💰 Pricing | [Vertex AI Pricing](https://cloud.google.com/vertex-ai/pricing) |
+| 📝 Prompt Engineering Guide | [Image Prompting Best Practices](https://cloud.google.com/vertex-ai/docs/generative-ai/image/prompting?utm_campaign=deveco_gdemembers&utm_source=deveco) |
+| 🔒 Safety Filter Settings | [Content Safety Docs](https://cloud.google.com/vertex-ai/docs/generative-ai/image/safety?utm_campaign=deveco_gdemembers&utm_source=deveco) |
+| 💰 Pricing | [Vertex AI Pricing](https://cloud.google.com/vertex-ai/pricing?utm_campaign=deveco_gdemembers&utm_source=deveco) |
 
 ---
 
@@ -295,13 +295,13 @@ This project is licensed under the **Apache 2.0 License**. See the [LICENSE](LIC
 
 ## ⚠️ Disclaimer
 
-All generated images must comply with [Google's Generative AI Prohibited Use Policy](https://cloud.google.com/terms/service-terms#19-google-generative-ai). Please ensure responsible and ethical use of AI-generated content.
+All generated images must comply with [Google's Generative AI Prohibited Use Policy](https://cloud.google.com/terms/service-terms?utm_campaign=deveco_gdemembers&utm_source=deveco#19-google-generative-ai). Please ensure responsible and ethical use of AI-generated content.
 
 ---
 
 ## 🙌 Acknowledgements
 
-Built with ❤️ using [Google Vertex AI Imagen 3](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview).
+Built with ❤️ using [Google Vertex AI Imagen 3](https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview?utm_campaign=deveco_gdemembers&utm_source=deveco).
 
 If you find this project helpful:
 - ⭐ **Star** the repository
