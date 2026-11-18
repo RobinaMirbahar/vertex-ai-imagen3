@@ -8,7 +8,7 @@
 
 > **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) ([Google Developer Expert in Cloud & AI](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco) · Google Cloud Champion Innovator · Co-Author of [*AI Engineering*](https://www.amazon.com/dp/B0GWCZWCF4))  
 > 📚 **Companion Publication:** [Medium (Google Cloud) — Design a Fashion Collection with Vertex AI Imagen 3 & Gemini 2.0](https://medium.com/google-cloud/design-a-fashion-collection-with-vertex-ai-imagen-3-gemini-2-0-c2bed4334106)  
-> **Focus:** Generating, Inpainting & Art-Directing Commercial Product Visuals with Google Cloud Vertex AI Imagen 3 in Python & Colab
+> **Core Stack:** [Google Cloud Vertex AI Imagen 3](https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview?utm_campaign=deveco_gdemembers&utm_source=deveco), [Google Gemini 2.0](https://ai.google.dev/gemini-api/docs?utm_campaign=deveco_gdemembers&utm_source=deveco), [Google Colab](https://colab.research.google.com/?utm_campaign=deveco_gdemembers&utm_source=deveco), and Python.
 
 ---
 
