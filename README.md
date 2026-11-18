@@ -41,15 +41,6 @@ flowchart TD
         O_HiRes["High-Resolution Studio Product Render"]
     end
     P_Sub & P_Light --> V_Img --> V_Safe --> O_HiRes
-    style Prompt fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style P_Sub fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style P_Light fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
-    style Lens fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
-    style Vertex fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
-    style V_Img fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
-    style V_Safe fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
-    style Out fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
-    style O_HiRes fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
 ```
 
 ---
